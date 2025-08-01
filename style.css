@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#app {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Input + botão Registrar */
+.input-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.input-wrapper input {
+  flex-grow: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+#btn-registrar {
+  background: #4f46e5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#btn-registrar:hover {
+  background: #4338ca;
+  transform: scale(1.05);
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  margin-top: 24px;
+}
+
+ul li {
+  background: #f9fafb;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.3s ease;
+}
+
+/* Texto da tarefa */
+ul li span {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+/* Tarefa concluída */
+ul li.completed span {
+  text-decoration: line-through;
+  color: #9ca3af;
+  background-color: transparent;
+}
+
+/* Botões de ação */
+ul li button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botão Concluir */
+.btn-concluir {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-concluir:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+/* Botão Excluir */
+.btn-excluir {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-excluir:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Ícones SVG */
+button svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+  transition: transform 0.2s ease;
+}
+
+button:hover svg {
+  transform: rotate(15deg);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  #btn-registrar {
+    width: 100%;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul li button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #1e293b, #334155);
+  }
+}
